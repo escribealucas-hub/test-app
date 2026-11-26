@@ -86,7 +86,7 @@ Questions live in `data/questions.json`. The file defines a `categories` object;
 - `answer`: zero-based index of the correct option in `options`.
 - `explanation` (optional): text shown after an answer.
 
-To add or edit content, maintain this structure and ensure each `answer` index points to a valid option. The application reads this JSON at startup. Available question-count options depend on the category's question count.
+To add or edit content, maintain this structure and ensure each `answer` index points to a valid option. The application reads this JSON at startup. Available question-count options depend on the category's question count: **All questions** is always available, while the three- and five-question choices appear only when the category contains at least that many questions. The selected questions are taken from the beginning of that category's array and then shuffled for presentation; choosing a shorter quiz does not randomly sample from the whole category.
 
 ## Repository structure
 
